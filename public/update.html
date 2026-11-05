@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Book</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Book Management System</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="insert.html">Add Book</a>
+            <a href="list.html">View Books</a>
+            <a href="update.html">Update Book</a>
+            <a href="delete.html">Delete Book</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="page-title">
+            <h2>Update Book Details</h2>
+            <p>Enter the Book ID and modify its information.</p>
+        </section>
+
+        <section class="panel">
+
+            <form id="updateBookForm">
+
+                <div class="form-group">
+                    <label for="bookId">Book ID</label>
+                    <input type="number" id="bookId" name="bookId"
+                           placeholder="Enter Book ID" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="title">Book Title</label>
+                    <input type="text" id="title" name="title"
+                           placeholder="Enter new title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="author">Author Name</label>
+                    <input type="text" id="author" name="author"
+                           placeholder="Enter author name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select Category</option>
+                        <option value="Fiction">Fiction</option>
+                        <option value="Science">Science</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Education">Education</option>
+                        <option value="History">History</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Price (₹)</label>
+                    <input type="number" id="price" name="price"
+                           placeholder="Enter price" min="0.01"
+                           step="0.01" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="stock">Stock Quantity</label>
+                    <input type="number" id="stock" name="stock"
+                           placeholder="Enter stock quantity" min="0" required>
+                </div>
+
+                <button type="submit">Update Book</button>
+
+                <p id="message" class="message"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Book Management System | Manage Your Books Easily</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
